@@ -26,5 +26,8 @@
     <ClCompile Include="Aplikacja testowa1.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+    <ClCompile Include="Przyklady kodu.cpp">
+      <Filter>Pliki zasobów</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
