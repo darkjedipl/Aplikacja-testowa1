@@ -52,8 +52,13 @@ void test1()
 	}
 
 	//4.a) Zakresowe for.
-	for (auto x : { 1,5,9,12 }) {
+	vector<int> liczby {1, 2, 3, 4};// elem to nazwa zmiennej dopasowanej do wartoœci vectora int (za pomoc¹ auto)
+	for (auto elem:liczby) {//pêtla po elementach
 
+	}
+
+	for (auto&elem : liczby) {//pêtla dodaj¹ca wartoœci w elementach
+		elem = elem + 100;
 	}
 	//5. switch: //jest dobra do stosowania przy budowaniu menusów i ogólnych opcji programu
 
@@ -64,7 +69,7 @@ void test1()
 
 	case 2:
 
-	default: //czyli case eles
+	default: //czyli case else
 		break;
 	}
 
@@ -75,6 +80,24 @@ void test1()
 
 
 	//***************************PÊTLE***********************************************************//
-
-
 }
+
+//***************************FUNKCJE***********************************************************
+
+	//1.standardowy wzorzec funkcji:
+int Funkcja1(int a, int b)
+{
+	return 0;
+}
+	//2. A tu aktualnie obowi¹zuj¹cy wzorzec poniewa¿ mo¿e przybieraæ wartoœci zale¿ne od argumentów
+auto Funkcja2(int a, int b) -> decltype(a)// tu mo¿emy wpisaæ te¿ po prostu int albo inn¹ zmienn¹ zale¿nie od potrzebnego wyniku
+{
+	return 0;
+}
+
+	//3. Zmiana wartoœci podawanej zmiennej na stosie (&ref czyli w odniesieniu do referencji mo¿na wiêc w wyniku dzia³ania funkcji zmieniæ jej parametry wejœciowe!)
+auto Funkcja3(int a, int&ref) -> decltype(a) //ref to tylko nazwa zmiennej, wiêc mogê j¹ sobie dowolnie kszta³towaæ.
+{
+	return 0;
+}
+//***************************FUNKCJE*********************************************************//
